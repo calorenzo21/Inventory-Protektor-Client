@@ -3,7 +3,11 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, DataSource } from 'typeorm';
 import { Client } from './entities/client.entity';
 import { ClientPhone } from './entities/client-phone-entity';
-import { CreateClientDto, CreateClientPhoneDto } from './dto/create-client.dto';
+import {
+  CreateClientDto,
+  CreateClientPhoneDto,
+} from './dto/create-client.dto';
+import { UpdateClientDto } from './dto/update-client.dto';
 
 @Injectable()
 export class ClientsService {
@@ -77,5 +81,50 @@ export class ClientsService {
     }
   }
 
-  // Additional CRUD methods follow the same pattern
+  async findAll(): Promise<Client[]> {
+    return this.clientRepository.find({ relations: ['phones'] });
+  }
+
+  async findOne(id: string): Promise<Client> {
+    const client = await this.clientRepository.findOne({
+      where: { id },
+      relations: ['phones'],
+    });
+    if (!client) {
+      throw new NotFoundException(`Client with ID ${id} not found`);
+    }
+    return client;
+  }
+
+  async update(id: string, updateClientDto: UpdateClientDto): Promise<Client> {
+    const client = await this.clientRepository.preload({
+      id,
+      ...updateClientDto,
+    });
+
+    if (!client) {
+      throw new NotFoundException(`Client with ID ${id} not found`);
+    }
+
+    try {
+      await this.clientRepository.save(client);
+    } catch (error) {
+      if (error.code === '23505') {
+        throw new ConflictException('Tax ID already registered');
+      }
+      throw error;
+    }
+
+    return this.findOne(id);
+  }
+
+  async delete(id: string): Promise<void> {
+    const result = await this.clientRepository.delete(id);
+    if (result.affected === 0) {
+      throw new NotFoundException(`Client with ID ${id} not found`);
+    }
+    if (result.affected < 0) {
+      throw new ConflictException(`Client with ID ${id} cannot be deleted`);
+    }
+  }
 }
