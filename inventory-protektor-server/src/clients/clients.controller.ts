@@ -17,10 +17,7 @@ import {
   ApiBody,
 } from '@nestjs/swagger';
 import { ClientsService } from './clients.service';
-import {
-  CreateClientDto,
-  CreateClientPhoneDto,
-} from './dto/create-client.dto';
+import { CreateClientDto, CreateClientPhoneDto } from './dto/create-client.dto';
 import { UpdateClientDto } from './dto/update-client.dto';
 import { Client } from './entities/client.entity';
 
@@ -30,52 +27,52 @@ export class ClientsController {
   constructor(private readonly clientsService: ClientsService) {}
 
   @Post()
-  @ApiOperation({ 
-    summary: 'Register new client', 
-    description: 'Creates a client record with contact information' 
+  @ApiOperation({
+    summary: 'Register new client',
+    description: 'Creates a client record with contact information',
   })
-  @ApiResponse({ 
-    status: 201, 
+  @ApiResponse({
+    status: 201,
     description: 'Client successfully registered',
-    type: Client 
+    type: Client,
   })
-  @ApiResponse({ 
-    status: 409, 
-    description: 'Conflict: Tax ID already exists' 
+  @ApiResponse({
+    status: 409,
+    description: 'Conflict: Tax ID already exists',
   })
   async createClient(@Body() createClientDto: CreateClientDto) {
     return this.clientsService.createClient(createClientDto);
   }
 
   @Post(':id/phones')
-  @ApiOperation({ 
-    summary: 'Add contact phone', 
-    description: 'Associates a new phone number with existing client' 
+  @ApiOperation({
+    summary: 'Add contact phone',
+    description: 'Associates a new phone number with existing client',
   })
-  @ApiParam({ 
-    name: 'id', 
+  @ApiParam({
+    name: 'id',
     description: 'Client UUID',
-    example: '550e8400-e29b-41d4-a716-446655440000' 
+    example: '550e8400-e29b-41d4-a716-446655440000',
   })
-  @ApiResponse({ 
-    status: 201, 
-    description: 'Phone number added successfully' 
+  @ApiResponse({
+    status: 201,
+    description: 'Phone number added successfully',
   })
-  @ApiResponse({ 
-    status: 404, 
-    description: 'Client not found' 
+  @ApiResponse({
+    status: 404,
+    description: 'Client not found',
   })
   async addPhone(
     @Param('id') clientId: string,
-    @Body() phoneData: CreateClientPhoneDto
+    @Body() phoneData: CreateClientPhoneDto,
   ) {
     return this.clientsService.addPhone(clientId, phoneData);
   }
 
   @Delete(':clientId/phones/:phoneId')
-  @ApiOperation({ 
-    summary: 'Remove contact phone', 
-    description: 'Deletes a phone number from client record' 
+  @ApiOperation({
+    summary: 'Remove contact phone',
+    description: 'Deletes a phone number from client record',
   })
   @ApiParam({ name: 'clientId', description: 'Client UUID' })
   @ApiParam({ name: 'phoneId', description: 'Phone record UUID' })
@@ -83,7 +80,7 @@ export class ClientsController {
   @ApiResponse({ status: 404, description: 'Phone record not found' })
   async removePhone(
     @Param('clientId') clientId: string,
-    @Param('phoneId') phoneId: string
+    @Param('phoneId') phoneId: string,
   ) {
     return this.clientsService.removePhone(phoneId);
   }
@@ -123,7 +120,10 @@ export class ClientsController {
   }
 
   @Patch(':id')
-  @ApiOperation({ summary: 'Update client', description: 'Updates client data' })
+  @ApiOperation({
+    summary: 'Update client',
+    description: 'Updates client data',
+  })
   @ApiParam({
     name: 'id',
     description: 'Client UUID',
@@ -132,7 +132,10 @@ export class ClientsController {
   @ApiBody({ type: UpdateClientDto })
   @ApiResponse({ status: 200, description: 'Client updated', type: Client })
   @ApiResponse({ status: 404, description: 'Client not found' })
-  @ApiResponse({ status: 409, description: 'Conflict: Tax ID already registered' })
+  @ApiResponse({
+    status: 409,
+    description: 'Conflict: Tax ID already registered',
+  })
   update(
     @Param('id', ParseUUIDPipe) id: string,
     @Body() updateClientDto: UpdateClientDto,
@@ -142,7 +145,10 @@ export class ClientsController {
 
   @Delete(':id')
   @HttpCode(204)
-  @ApiOperation({ summary: 'Delete client', description: 'Removes client record' })
+  @ApiOperation({
+    summary: 'Delete client',
+    description: 'Removes client record',
+  })
   @ApiParam({
     name: 'id',
     description: 'Client UUID',
@@ -150,7 +156,10 @@ export class ClientsController {
   })
   @ApiResponse({ status: 204, description: 'Client deleted successfully' })
   @ApiResponse({ status: 404, description: 'Client not found' })
-  @ApiResponse({ status: 409, description: 'Conflict: Client cannot be deleted' })
+  @ApiResponse({
+    status: 409,
+    description: 'Conflict: Client cannot be deleted',
+  })
   delete(@Param('id', ParseUUIDPipe) id: string) {
     return this.clientsService.delete(id);
   }
