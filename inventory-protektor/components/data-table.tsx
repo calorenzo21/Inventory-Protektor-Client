@@ -27,13 +27,10 @@ import {
   MoreVerticalIcon,
   PlusIcon,
 } from "lucide-react"
-import { z } from "zod"
 
 import { useIsMobile } from "@/hooks/use-mobile"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { type ChartConfig, ChartContainer } from "@/components/ui/chart"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -46,6 +43,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Separator } from "@/components/ui/separator"
+import Image from "next/image";
 import {
   Sheet,
   SheetClose,
@@ -58,73 +56,70 @@ import {
 } from "@/components/ui/sheet"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 
-// Update the schema to match our new data structure
-export const schema = z.object({
-  id: z.number(),
-  modelo: z.string(),
-  categoria: z.string(),
-  precio: z.number(),
-  stock: z.number(),
-  garantias: z.number(),
-  statusStock: z.string(),
-  ultimaActualizacion: z.string(),
-  totalStockGarantia: z.number(),
-  valor: z.number(),
-})
-
-// Función para generar un color de fondo basado en el nombre del modelo
-function getColorFromModel(modelo: string): string {
-  // Extraer la primera letra y convertirla a un número (código ASCII)
-  const firstChar = modelo.charCodeAt(0)
-  // Usar diferentes rangos de colores según la categoría del modelo
-  if (modelo.startsWith("P")) {
-    return `hsl(${(firstChar * 5) % 360}, 70%, 80%)`
-  } else if (modelo.startsWith("S")) {
-    return `hsl(${(firstChar * 7) % 360}, 80%, 75%)`
-  } else {
-    return `hsl(${(firstChar * 9) % 360}, 75%, 70%)`
-  }
-}
+// Tipo para los datos de la fila
+export type Product = {
+  productId: string;
+  model: string;
+  description: string;
+  precio: number;
+  priceDistribution: number;
+  stock: number;
+  minStock: number;
+  imageUrl: string;
+  lastUpdated: string;
+  category: {
+    id: string;
+    name: string;
+    description: string;
+  };
+};
 
 // Función para obtener el color de la categoría
-function getCategoryColor(categoria: string): string {
-  switch (categoria) {
-    case "Doméstico":
-      return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200 dark:bg-yellow-900/30 dark:text-yellow-500 text-sm"
+export function getCategoryColor(categoryName: string): string {
+  switch (categoryName) {
+    case "Protectores Eléctricos":
+      return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-500 text-sm"
     case "Industrial":
-      return "bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900/30 dark:text-blue-500 text-sm"
+      return "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-500 text-sm"
     case "Supervisor":
-      return "bg-green-100 text-green-800 hover:bg-green-200 dark:bg-green-900/30 dark:text-green-500 text-sm"
+      return "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-500 text-sm"
     default:
-      return ""
+      return "bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-400 text-sm"
   }
 }
 
-// Replace the columns definition
-const columns: ColumnDef<z.infer<typeof schema>>[] = [
+// Función para convertir los datos entrantes al tipo correcto
+function convertProductData(data: any[]): Product[] {
+  return data.map(item => ({
+    ...item,
+    precio: typeof item.precio === 'string' ? parseFloat(item.precio) : item.precio,
+    priceDistribution: typeof item.priceDistribution === 'string' ? parseFloat(item.priceDistribution) : item.priceDistribution,
+  }));
+}
+
+// Reemplazar la definición de columnas
+const columns: ColumnDef<Product>[] = [
   {
     id: "image",
     header: "",
     cell: ({ row }) => {
-      const modelo = row.original.modelo
-      const initials = modelo.substring(0, 2)
-      const bgColor = getColorFromModel(modelo)
-
+      const product = row.original;
       return (
         <div className="flex justify-center items-center">
-          <Avatar className="h-12 w-12 border-2 border-muted">
-            <AvatarImage src={`/placeholder.svg?height=100&width=100&text=${modelo}`} alt={modelo} />
-            <AvatarFallback style={{ backgroundColor: bgColor }} className="text-foreground">
-              {initials}
-            </AvatarFallback>
-          </Avatar>
+          <Image
+            src={`/images/${product.imageUrl}`}
+            alt={product.model}
+            width={64}
+            height={64}
+            className="rounded-md object-contain"
+          />
         </div>
-      )
+      );
     },
     enableHiding: false,
   },
   {
-    accessorKey: "modelo",
+    accessorKey: "model",
     header: "Modelo",
     cell: ({ row }) => {
       return <TableCellViewer item={row.original} />
@@ -132,14 +127,16 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "categoria",
+    accessorKey: "category.name",
     header: "Categoría",
     cell: ({ row }) => {
-      const categoryColor = getCategoryColor(row.original.categoria)
+      const categoryName = row.original.category.name;
+      const categoryColor = getCategoryColor(categoryName);
+      const firstWord = categoryName.split(' ')[0];
       return (
         <div className="w-32">
-          <Badge variant="outline" className={`px-1.5 ${categoryColor}`}>
-            {row.original.categoria}
+          <Badge variant="outline" className={`px-1.5 ${categoryColor} font-normal`}>
+            {firstWord}
           </Badge>
         </div>
       )
@@ -147,53 +144,52 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
   },
   {
     accessorKey: "precio",
-    header: "Precio",
-    cell: ({ row }) => <div className="font-medium">${row.original.precio.toFixed(2)}</div>,
+    header: "Precio Unitario",
+    cell: ({ row }) => <div className="font-normal">${row.original.precio.toFixed(2)}</div>,
   },
   {
     accessorKey: "stock",
-    header: "Stock",
-    cell: ({ row }) => <div className="font-medium text-center">{row.original.stock}</div>,
+    header: "Stock Actual",
+    cell: ({ row }) => <div className="font-normal text-center">{row.original.stock}</div>,
   },
   {
-    accessorKey: "garantias",
-    header: "Garantías",
-    cell: ({ row }) => <div className="font-medium text-center">{row.original.garantias}</div>,
-  },
-  {
-    accessorKey: "statusStock",
+    id: "statusStock",
     header: "Status Stock",
-    cell: ({ row }) => (
-      <Badge
-        variant={row.original.statusStock === "Adecuado" ? "outline" : "default"}
-        className={`flex gap-2 px-2 text-sm lg:w-[115px] ${row.original.statusStock === "Adecuado" ? "" : "text-red-800 bg-red-100"}`}
-      >
-        {row.original.statusStock === "Adecuado" ? (
-          <CheckCircle2Icon className="text-green-500 dark:text-green-400"/>
-        ) : (
-          <AlertTriangleIcon className="text-red-800" />
-        )}
-        {row.original.statusStock}
-      </Badge>
-    ),
-  },
-  {
-    accessorKey: "ultimaActualizacion",
-    header: "Última Actualización",
     cell: ({ row }) => {
-      const date = new Date(row.original.ultimaActualizacion)
-      return <div className="font-medium">{date.toLocaleDateString()}</div>
+      const { stock, minStock } = row.original;
+      const status = stock < minStock ? "Bajo" : "Adecuado";
+
+      return (
+        <Badge
+          variant={status === "Adecuado" ? "outline" : "default"}
+          className={`flex gap-2 px-2 text-sm lg:w-[115px] ${status === "Adecuado" ? "bg-green-50" : "text-red-800 bg-red-100 font-medium"}`}
+        >
+          {status === "Adecuado" ? (
+            <CheckCircle2Icon className="text-green-500 dark:text-green-400" />
+          ) : (
+            <AlertTriangleIcon className="text-red-800" />
+          )}
+          {status}
+        </Badge>
+      );
     },
   },
   {
-    accessorKey: "totalStockGarantia",
-    header: "Total Stock",
-    cell: ({ row }) => <div className="font-medium text-center">{row.original.totalStockGarantia}</div>,
+    accessorKey: "lastUpdated",
+    header: "Última Actualización",
+    cell: ({ row }) => {
+      const date = new Date(row.original.lastUpdated);
+      return <div className="font-normal">{date.toLocaleDateString()}</div>;
+    },
   },
   {
-    accessorKey: "valor",
+    id: "valorTotal",
     header: "Valor Total",
-    cell: ({ row }) => <div className="font-medium text-right">${row.original.valor.toFixed(2)}</div>,
+    cell: ({ row }) => {
+      const { precio, stock } = row.original;
+      const totalValue = precio * stock;
+      return <div className="font-normal text-right">${totalValue.toFixed(2)}</div>;
+    },
   },
   {
     id: "actions",
@@ -215,22 +211,24 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
       </DropdownMenu>
     ),
   },
-]
+];
 
-// Modificar la función DataTable para eliminar los tabs
+// Modificar la función DataTable
 export function DataTable({
   data: initialData,
 }: {
-  data: z.infer<typeof schema>[]
+  data: any[] // Aceptamos datos crudos
 }) {
-  const [data, setData] = React.useState(() => initialData)
-  const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({})
-  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
-  const [sorting, setSorting] = React.useState<SortingState>([])
+  // Convertir los datos al tipo correcto
+  const data = React.useMemo(() => convertProductData(initialData), [initialData]);
+  
+  const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
+  const [sorting, setSorting] = React.useState<SortingState>([]);
   const [pagination, setPagination] = React.useState({
     pageIndex: 0,
     pageSize: 10,
-  })
+  });
 
   const table = useReactTable({
     data,
@@ -241,7 +239,7 @@ export function DataTable({
       columnFilters,
       pagination,
     },
-    getRowId: (row) => row.id.toString(),
+    getRowId: (row) => row.productId,
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,
     onColumnVisibilityChange: setColumnVisibility,
@@ -255,9 +253,12 @@ export function DataTable({
   })
 
   return (
-    <div className="flex w-full flex-col justify-start gap-6">
+    <div className="container flex flex-col justify-start gap-6 mx-auto">
       <div className="flex items-center justify-between px-4 lg:px-6">
-        <h2 className="text-lg font-semibold">Inventario de Productos</h2>
+        <div className="flex flex-col items-start gap-3">
+          <h2 className="text-3xl font-semibold text-navy-blue">Inventario de Productos</h2>
+          <p className="text-muted-foreground font-normal"> Monitorea existencias, detalles y estado de cada producto en tiempo real</p>
+        </div>
         <div className="flex items-center gap-2">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -402,54 +403,35 @@ export function DataTable({
   )
 }
 
-const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
-]
-
-const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "var(--primary)",
-  },
-  mobile: {
-    label: "Mobile",
-    color: "var(--primary)",
-  },
-} satisfies ChartConfig
-
-// Update the TableCellViewer component to display product information
-function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
+// Componente TableCellViewer
+function TableCellViewer({ item }: { item: Product }) {
   const isMobile = useIsMobile()
-  const initials = item.modelo.substring(0, 2)
-  const bgColor = getColorFromModel(item.modelo)
-  const categoryColor = getCategoryColor(item.categoria)
+  const categoryColor = getCategoryColor(item.category.name)
+  const statusStock = item.stock < item.minStock ? "Bajo" : "Adecuado";
+  const categoryFirstWord = item.category.name.split(' ')[0];
 
   return (
     <Sheet>
       <SheetTrigger asChild>
         <Button variant="link" className="w-fit px-0 text-left text-foreground">
-          {item.modelo}
+          {item.model}
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="flex flex-col">
+      <SheetContent side="right" className="flex flex-col px-4">
         <SheetHeader className="gap-1">
           <div className="flex items-center gap-4">
-            <Avatar className="h-16 w-16 border-2 border-muted">
-              <AvatarImage src={`/placeholder.svg?height=100&width=100&text=${item.modelo}`} alt={item.modelo} />
-              <AvatarFallback style={{ backgroundColor: bgColor }} className="text-foreground text-xl">
-                {initials}
-              </AvatarFallback>
-            </Avatar>
+            <Image
+              src={`/images/${item.imageUrl}`}
+              alt={item.model}
+              width={64}
+              height={64}
+              className="rounded-md object-contain"
+            />
             <div>
-              <SheetTitle>{item.modelo}</SheetTitle>
+              <SheetTitle>{item.model}</SheetTitle>
               <SheetDescription>
-                <Badge variant="outline" className={`mt-1 px-1.5 ${categoryColor}`}>
-                  {item.categoria}
+                <Badge variant="outline" className={`mt-1 px-1.5 ${categoryColor} font-normal`}>
+                  {categoryFirstWord}
                 </Badge>
               </SheetDescription>
             </div>
@@ -460,8 +442,8 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
             <>
               <Separator />
               <div className="grid gap-2">
-                <div className="flex gap-2 font-medium leading-none">
-                  {item.statusStock === "Adecuado" ? (
+                <div className="flex gap-2 font-semibold leading-none">
+                  {statusStock === "Adecuado" ? (
                     <>
                       Stock adecuado <CheckCircle2Icon className="size-4 text-green-500" />
                     </>
@@ -472,7 +454,7 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
                   )}
                 </div>
                 <div className="text-muted-foreground">
-                  Última actualización: {new Date(item.ultimaActualizacion).toLocaleDateString()}
+                  Última actualización: {new Date(item.lastUpdated).toLocaleDateString()}
                 </div>
               </div>
               <Separator />
@@ -480,18 +462,22 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
           )}
           <form className="flex flex-col gap-4">
             <div className="flex flex-col gap-3">
-              <Label htmlFor="modelo">Modelo</Label>
-              <Input id="modelo" defaultValue={item.modelo} />
+              <Label htmlFor="model">Modelo</Label>
+              <Input id="model" defaultValue={item.model} />
+            </div>
+            <div className="flex flex-col gap-3">
+              <Label htmlFor="description">Descripción</Label>
+              <Input id="description" defaultValue={item.description} />
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="flex flex-col gap-3">
-                <Label htmlFor="categoria">Categoría</Label>
-                <Select defaultValue={item.categoria}>
-                  <SelectTrigger id="categoria" className="w-full">
+                <Label htmlFor="category">Categoría</Label>
+                <Select defaultValue={item.category.name}>
+                  <SelectTrigger id="category" className="w-full">
                     <SelectValue placeholder="Seleccionar categoría" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="Domestico">Doméstico</SelectItem>
+                    <SelectItem value="Doméstico">Doméstico</SelectItem>
                     <SelectItem value="Industrial">Industrial</SelectItem>
                     <SelectItem value="Supervisor">Supervisor</SelectItem>
                   </SelectContent>
@@ -499,7 +485,7 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
               </div>
               <div className="flex flex-col gap-3">
                 <Label htmlFor="statusStock">Status Stock</Label>
-                <Select defaultValue={item.statusStock}>
+                <Select defaultValue={statusStock}>
                   <SelectTrigger id="statusStock" className="w-full">
                     <SelectValue placeholder="Seleccionar status" />
                   </SelectTrigger>
@@ -512,32 +498,52 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="flex flex-col gap-3">
-                <Label htmlFor="precio">Precio</Label>
-                <Input id="precio" type="number" step="0.01" defaultValue={item.precio} />
+                <Label htmlFor="precio">Precio Unitario</Label>
+                <Input 
+                  id="precio" 
+                  type="number" 
+                  step="0.01" 
+                  defaultValue={item.precio.toFixed(2)} 
+                />
               </div>
               <div className="flex flex-col gap-3">
-                <Label htmlFor="stock">Stock</Label>
+                <Label htmlFor="stock">Stock Actual</Label>
                 <Input id="stock" type="number" defaultValue={item.stock} />
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="flex flex-col gap-3">
-                <Label htmlFor="garantias">Garantías</Label>
-                <Input id="garantias" type="number" defaultValue={item.garantias} />
+                <Label htmlFor="minStock">Stock Mínimo</Label>
+                <Input id="minStock" type="number" defaultValue={item.minStock} />
               </div>
               <div className="flex flex-col gap-3">
-                <Label htmlFor="ultimaActualizacion">Última Actualización</Label>
-                <Input id="ultimaActualizacion" type="date" defaultValue={item.ultimaActualizacion} />
+                <Label htmlFor="lastUpdated">Última Actualización</Label>
+                <Input 
+                  id="lastUpdated" 
+                  type="date" 
+                  defaultValue={new Date(item.lastUpdated).toISOString().split('T')[0]} 
+                />
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="flex flex-col gap-3">
-                <Label htmlFor="totalStockGarantia">Total</Label>
-                <Input id="totalStockGarantia" type="number" defaultValue={item.totalStockGarantia} disabled />
+                <Label htmlFor="priceDistribution">Precio Distribución</Label>
+                <Input 
+                  id="priceDistribution" 
+                  type="number" 
+                  step="0.01" 
+                  defaultValue={item.priceDistribution.toFixed(2)} 
+                />
               </div>
               <div className="flex flex-col gap-3">
                 <Label htmlFor="valor">Valor Total</Label>
-                <Input id="valor" type="number" step="0.01" defaultValue={item.valor} disabled />
+                <Input 
+                  id="valor" 
+                  type="number" 
+                  step="0.01" 
+                  defaultValue={(item.precio * item.stock).toFixed(2)} 
+                  disabled 
+                />
               </div>
             </div>
           </form>
@@ -552,5 +558,5 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
         </SheetFooter>
       </SheetContent>
     </Sheet>
-  )
+  );
 }

@@ -60,6 +60,22 @@ export class ProductsController {
     return this.productsService.findAll();
   }
 
+  @Get(':model')
+  @ApiOperation({
+    summary: 'Get product details by model',
+    description: 'Finds product by model with stock history',
+  })
+  @ApiParam({
+    name: 'model',
+    description: 'Product model',
+    example: 'PRD-110',
+  })
+  @ApiResponse({ status: 200, description: 'Product details', type: Product })
+  @ApiResponse({ status: 404, description: 'Product not found' })
+  findOneByModel(@Param('model') model: string) {
+    return this.productsService.findOneByModel(model);
+  }
+
   @Get(':id')
   @ApiOperation({
     summary: 'Get product details',

@@ -5,6 +5,8 @@ import { DatabaseModule } from './database/database.module';
 import { CategoriesModule } from './categories/categories.module';
 import { ProductsModule } from './products/products.module';
 import { ClientsModule } from './clients/clients.module';
+import { UploadModule } from './upload/upload.module';
+import { MetricsModule } from './metrics/metrics.module';
 
 @Module({
   imports: [
@@ -13,6 +15,8 @@ import { ClientsModule } from './clients/clients.module';
     CategoriesModule,
     ProductsModule,
     ClientsModule,
+    UploadModule,
+    MetricsModule,
   ],
   controllers: [],
   providers: [],

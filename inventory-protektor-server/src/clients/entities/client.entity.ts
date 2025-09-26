@@ -1,4 +1,10 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany, Index } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToMany,
+  Index,
+} from 'typeorm';
 import { ApiProperty } from '@nestjs/swagger';
 import { ClientPhone } from './client-phone-entity';
 
@@ -8,7 +14,7 @@ export class Client {
   @ApiProperty({
     description: 'Unique identifier (UUID v4)',
     example: '550e8400-e29b-41d4-a716-446655440000',
-    readOnly: true
+    readOnly: true,
   })
   id: string;
 
@@ -16,50 +22,54 @@ export class Client {
   @ApiProperty({
     description: 'Legal business name',
     example: 'Tech Solutions Corp',
-    maxLength: 100
+    maxLength: 100,
   })
   businessName: string;
 
-  @Column({ name: 'tax_id', unique: true })
-  @Index('idx_clients_tax_id')
+  @Column({ name: 'tax_id', unique: true, nullable: true, length: 20 })
+  @Index('idx_clients_tax_id', {
+    unique: true,
+    where: '"tax_id" IS NOT NULL',
+  })
   @ApiProperty({
     description: 'Tax Identification Number (RIF/VAT)',
     example: 'J-123456789',
-    maxLength: 20
+    maxLength: 20,
   })
   taxId: string;
 
-  @Column({ name: 'email', length: 100 })
+  @Column({ name: 'email', length: 100, nullable: true })
   @ApiProperty({
     description: 'Official contact email',
-    example: 'contact@techsolutions.com'
+    example: 'contact@techsolutions.com',
   })
   email: string;
 
-  @Column({ name: 'legal_address', type: 'text' })
+  @Column({ name: 'legal_address', type: 'text', nullable: true })
   @ApiProperty({
     description: 'Legal business address',
-    example: '123 Main Street, Tech Valley, CA 94025'
+    example: '123 Main Street, Tech Valley, CA 94025',
   })
   legalAddress: string;
 
-  @Column({ 
+  @Column({
     name: 'registration_date',
     type: 'timestamp',
-    default: () => 'CURRENT_TIMESTAMP'
+    default: () => 'CURRENT_TIMESTAMP',
+    nullable: true,
   })
   @ApiProperty({
     description: 'Client registration timestamp',
     example: '2024-03-15T09:00:00Z',
-    readOnly: true
+    readOnly: true,
   })
   registrationDate: Date;
 
-  @OneToMany(() => ClientPhone, phone => phone.client)
+  @OneToMany(() => ClientPhone, (phone) => phone.client)
   @ApiProperty({
     description: 'Associated contact phones',
     type: () => [ClientPhone],
-    required: false
+    required: false,
   })
   phones?: ClientPhone[];
 }

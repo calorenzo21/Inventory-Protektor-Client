@@ -29,6 +29,14 @@ export class Product {
   })
   model: string;
 
+  @Column({ type: 'text', nullable: true })
+  @ApiProperty({
+    description: 'Description of the product',
+    example: 'A high-quality product that fits your needs',
+    required: false,
+  })
+  description?: string;
+
   @ManyToOne(() => Category, { eager: true })
   @JoinColumn({ name: 'categoria_id' })
   @Index('idx_productos_categoria')
@@ -46,6 +54,14 @@ export class Product {
     minimum: 0.01,
   })
   precio: number;
+
+  @Column({ type: 'numeric', precision: 12, scale: 2, default: 0 })
+  @ApiProperty({
+    description: 'Price distribution factor for inventory calculations',
+    example: 1.2,
+    minimum: 0,
+  })
+  priceDistribution: number;
 
   @Column({ default: 0 })
   @ApiProperty({

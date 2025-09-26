@@ -7,6 +7,7 @@ import {
   IsUUID,
   MaxLength,
   Min,
+  IsOptional,
 } from 'class-validator';
 
 export class CreateProductDto {
@@ -19,6 +20,17 @@ export class CreateProductDto {
     maxLength: 100,
   })
   model: string;
+
+  @IsString()
+  @IsOptional()
+  @MaxLength(100)
+  @ApiProperty({
+    description: 'Product name or title',
+    example: 'Smartphone X Pro',
+    maxLength: 100,
+    required: false,
+  })
+  description: string;
 
   @IsUUID()
   @ApiProperty({

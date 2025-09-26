@@ -28,23 +28,24 @@ export class ClientsService {
     try {
       // Create client
       const client = queryRunner.manager.create(Client, {
-        businessName: createClientDto.businessName,
-        taxId: createClientDto.taxId,
-        email: createClientDto.email,
-        legalAddress: createClientDto.legalAddress,
+        businessName: createClientDto.businessName ? createClientDto.businessName : '',
+        taxId: createClientDto.taxId ? createClientDto.taxId : '',
+        email: createClientDto.email ? createClientDto.email : '',
+        legalAddress: createClientDto.legalAddress ? createClientDto.legalAddress : '',
       });
 
       const savedClient = await queryRunner.manager.save(client);
 
       // Create associated phones
-      const phones = createClientDto.phones.map((phone) =>
-        queryRunner.manager.create(ClientPhone, {
-          ...phone,
-          client: savedClient,
-        }),
-      );
-
-      await queryRunner.manager.save(phones);
+      if (createClientDto.phones && createClientDto.phones.length > 0) {
+        const phones = createClientDto.phones.map((phone) =>
+          queryRunner.manager.create(ClientPhone, {
+            ...phone,
+            client: savedClient,
+          }),
+        );
+        await queryRunner.manager.save(phones);
+      }
 
       await queryRunner.commitTransaction();
       return await this.clientRepository.findOne({

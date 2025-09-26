@@ -1,6 +1,6 @@
 "use client"
 
-import * as React from "react"
+import type * as React from "react"
 import {
   IconCamera,
   IconChartBar,
@@ -8,7 +8,7 @@ import {
   IconFileAi,
   IconFileDescription,
   IconSettings,
-  IconBoxSeam
+  IconBoxSeam,
 } from "@tabler/icons-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -22,6 +22,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { useSideBarBreakpoints } from "@/hooks/use-sidebar-breakpoints"
+import { cn } from "@/lib/utils"
 
 const data = {
   user: {
@@ -44,6 +46,16 @@ const data = {
       title: "Inventario",
       url: "/inventory",
       icon: IconBoxSeam,
+      subItems: [
+        {
+          title: "Lista de Productos",
+          url: "/inventory",
+        },
+        {
+          title: "Gestionar Inventario",
+          url: "/inventory/upload",
+        },
+      ],
     },
   ],
   navClouds: [
@@ -101,31 +113,35 @@ const data = {
       icon: IconSettings,
     },
   ],
-  documents: [
-  ],
+  documents: [],
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { config } = useSideBarBreakpoints()
+
   return (
-    <Sidebar collapsible="offcanvas" {...props}>
-      <SidebarHeader>
+    <Sidebar collapsible="offcanvas" {...props} className="bg-navy-blue transition-all duration-300">
+      <SidebarHeader className="bg-navy-blue">
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
-              className="data-[slot=sidebar-menu-button]:!p-1.5"
+              size={config.menuItemSize}
+              className={cn("data-[slot=sidebar-menu-button]:!p-1.5 transition-all duration-200", config.menuTextSize)}
             >
               <a href="#">
-                <span className="text-md font-semibold">Representaciones Stevan</span>
+                <span className="font-semibold text-white">Representaciones Stevan</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
-      <SidebarContent>
+
+      <SidebarContent className="bg-navy-blue text-white">
         <NavMain items={data.navMain} />
       </SidebarContent>
-      <SidebarFooter>
+
+      <SidebarFooter className="bg-navy-blue">
         <NavUser user={data.user} />
       </SidebarFooter>
     </Sidebar>

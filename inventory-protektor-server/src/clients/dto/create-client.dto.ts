@@ -1,6 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsString, IsNotEmpty, MaxLength, IsEmail, IsArray, ValidateNested } from 'class-validator';
+import { IsString, IsNotEmpty, MaxLength, IsEmail, IsArray, ValidateNested, IsOptional } from 'class-validator';
 import { Type } from 'class-transformer';
+import { Optional } from '@nestjs/common/decorators/core/optional.decorator';
 
 export class CreateClientPhoneDto {
   @IsString()
@@ -31,14 +32,15 @@ export class CreateClientDto {
   })
   businessName: string;
 
+  @IsOptional()
   @IsString()
-  @IsNotEmpty()
   @ApiProperty({ 
     example: 'J-987654321',
     description: 'Tax identification number' 
   })
   taxId: string;
 
+  @IsOptional()
   @IsEmail()
   @ApiProperty({ 
     example: 'operations@globaltech.com',
@@ -46,14 +48,15 @@ export class CreateClientDto {
   })
   email: string;
 
+  @IsOptional()
   @IsString()
-  @IsNotEmpty()
   @ApiProperty({ 
     example: '456 Innovation Blvd, Tech City',
     description: 'Legal business address' 
   })
   legalAddress: string;
 
+  @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
   @Type(() => CreateClientPhoneDto)

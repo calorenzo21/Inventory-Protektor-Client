@@ -27,13 +27,13 @@ const chartConfig = {
 
 export function ChartTopSales({ chartData }: ChartTopSalesProps) {
   return (
-    <Card>
+    <Card className="border-3">
       <CardHeader>
-        <CardTitle>Top 5 más Vendidos</CardTitle>
-        <CardDescription>Abril - 2025</CardDescription>
+        <CardTitle className="font-medium">Top 5 más Vendidos</CardTitle>
+        <CardDescription className="font-normal">Junio - 2025</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="w-full max-h-[300px]">
+        <ChartContainer config={chartConfig} className="w-full aspect-square max-h-[350px]">
           <BarChart
             accessibilityLayer
             data={chartData}

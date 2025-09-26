@@ -1,0 +1,1129 @@
+{
+    "fileType": "order",
+    "data": [
+        {
+            "id": "aa7b41df-8463-466f-b443-25cb78aeffb6",
+            "clientName": "DISTRIBUIDORA VYR 2014, C.A.",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 6,
+                    "price": 8.95,
+                    "total": 53.699999999999996,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                },
+                {
+                    "id": "a8e91e89-c355-4ef7-90db-ac2c3f282bbb",
+                    "model": "PAR-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA.",
+                    "quantity": 6,
+                    "price": 14.45,
+                    "total": 86.69999999999999,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                },
+                {
+                    "id": "c9050e75-7745-490e-9795-80f0aab93734",
+                    "model": "PARDA-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION 220 VAC.  REGLETA /REGLETA.  AJUSTABLE",
+                    "quantity": 2,
+                    "price": 17.85,
+                    "total": 35.7,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARDA220.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 3,
+                    "price": 14.45,
+                    "total": 43.349999999999994,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                },
+                {
+                    "id": "b10702e8-3937-4169-a41e-22d91b79b72c",
+                    "model": "PARTEP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  REGLETA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 3,
+                    "price": 14.45,
+                    "total": 43.349999999999994,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARTE220.jpg"
+                }
+            ],
+            "total": 262.79999999999995,
+            "orderDate": "2025-08-02T04:27:40.000Z",
+            "sheetName": "(1) DIST VYR 08-25"
+        },
+        {
+            "id": "d0930be7-336a-4fd1-8899-755a2c331e05",
+            "clientName": "MULTIFERRE DUBAI, C.A.",
+            "products": [
+                {
+                    "id": "74ffdd36-d385-436b-b758-3cd3d1f20c1d",
+                    "model": "PARP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 500,
+                    "price": 13.65,
+                    "total": 6825,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                }
+            ],
+            "total": 6825,
+            "orderDate": "2025-08-02T04:27:40.000Z",
+            "sheetName": "(1) MULTIFERRE DUBAI 08-25"
+        },
+        {
+            "id": "5dd1380f-aa39-47c6-94aa-0b79ba5c7aa1",
+            "clientName": "CORPORACION LA CASTELLANA, C.A.",
+            "products": [
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 12,
+                    "price": 13.65,
+                    "total": 163.8,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                }
+            ],
+            "total": 163.8,
+            "orderDate": "2025-08-02T04:27:40.000Z",
+            "sheetName": "(1) CORP LA CASTELLANA 08-25"
+        },
+        {
+            "id": "c6449edb-83a8-4f05-9c3d-086479ea6278",
+            "clientName": "FERREMATERIALES LA FUERTE, C.A.",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 10,
+                    "price": 8.95,
+                    "total": 89.5,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                },
+                {
+                    "id": "74ffdd36-d385-436b-b758-3cd3d1f20c1d",
+                    "model": "PARP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 6,
+                    "price": 13.65,
+                    "total": 81.9,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 20,
+                    "price": 13.65,
+                    "total": 273,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                },
+                {
+                    "id": "b10702e8-3937-4169-a41e-22d91b79b72c",
+                    "model": "PARTEP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  REGLETA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 10,
+                    "price": 13.65,
+                    "total": 136.5,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARTE220.jpg"
+                }
+            ],
+            "total": 580.9,
+            "orderDate": "2025-08-06T04:27:40.000Z",
+            "sheetName": "(1) FERREMAT LA FUERTE 08-25"
+        },
+        {
+            "id": "da586e08-4a27-4e81-9675-a5cf6e31917c",
+            "clientName": "INVERSIONES SALMA STAR, C.A.",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 10,
+                    "price": 8.95,
+                    "total": 89.5,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 10,
+                    "price": 13.65,
+                    "total": 136.5,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                }
+            ],
+            "total": 226,
+            "orderDate": "2025-08-07T04:27:40.000Z",
+            "sheetName": "(1) INV SALMA STAR 08-25"
+        },
+        {
+            "id": "bad0dcc9-c65e-4b4b-861d-c7391d57fc5e",
+            "clientName": "SUMINISTROS Y SERVICIOS BUENAVENTURA, C.A.",
+            "products": [
+                {
+                    "id": "316b0ce4-146f-49ed-a291-08f0454dba9e",
+                    "model": "PEEP-110",
+                    "description": "EQUIPOS ELECTRICOS PLUS DOBLE TOMA 110  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 6,
+                    "price": 14.7,
+                    "total": 88.19999999999999,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PEEP110.jpg"
+                },
+                {
+                    "id": "a8e91e89-c355-4ef7-90db-ac2c3f282bbb",
+                    "model": "PAR-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA.",
+                    "quantity": 6,
+                    "price": 14.45,
+                    "total": 86.69999999999999,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                },
+                {
+                    "id": "fde4fe7f-3ffd-4ee4-88f8-d4d5ac693e77",
+                    "model": "PARPHD-220",
+                    "description": "PROTECTOR CABLE CABLE 63A 220VAC",
+                    "quantity": 10,
+                    "price": 24.85,
+                    "total": 248.5,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARPHD220.jpg"
+                },
+                {
+                    "id": "c9050e75-7745-490e-9795-80f0aab93734",
+                    "model": "PARDA-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION 220 VAC.  REGLETA /REGLETA.  AJUSTABLE",
+                    "quantity": 6,
+                    "price": 17.85,
+                    "total": 107.10000000000001,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARDA220.jpg"
+                },
+                {
+                    "id": "080702a6-4973-430f-b269-3f8193d607ca",
+                    "model": "PAREP-110",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE 110  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 4,
+                    "price": 14.45,
+                    "total": 57.8,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE110.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 6,
+                    "price": 14.45,
+                    "total": 86.69999999999999,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                },
+                {
+                    "id": "b10702e8-3937-4169-a41e-22d91b79b72c",
+                    "model": "PARTEP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  REGLETA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 6,
+                    "price": 14.45,
+                    "total": 86.69999999999999,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARTE220.jpg"
+                },
+                {
+                    "id": "a465826f-f1d0-4523-b10c-416a1a01e879",
+                    "model": "USTDA-220",
+                    "description": "REFRIGERACION TRIFASICO 220  VAC. AJUSTABLE CON INV DE  FASE",
+                    "quantity": 6,
+                    "price": 19.8,
+                    "total": 118.80000000000001,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "USTDA220.jpg"
+                }
+            ],
+            "total": 880.5,
+            "orderDate": "2025-08-07T04:27:40.000Z",
+            "sheetName": "(1) SS BUENAVENTURA 08-25"
+        },
+        {
+            "id": "8e8cb345-36f0-4a9d-883e-1705b8ac2902",
+            "clientName": "CORPORACION LA CASTELLANA II, C.A.",
+            "products": [
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 6,
+                    "price": 13.65,
+                    "total": 81.9,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                }
+            ],
+            "total": 81.9,
+            "orderDate": "2025-08-07T04:27:40.000Z",
+            "sheetName": "(1) CORP LA CASTELLANA II 08-25"
+        },
+        {
+            "id": "eff6fdc4-2fef-4149-8aa7-7309bc55deca",
+            "clientName": "FERREPLAZA IMPORT, C.A.",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 150,
+                    "price": 8.5,
+                    "total": 1275,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                },
+                {
+                    "id": "a9b652ba-9893-43e6-af49-ab057a1dcf25",
+                    "model": "PARP-110",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  110  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 25,
+                    "price": 13,
+                    "total": 325,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR110.jpg"
+                },
+                {
+                    "id": "080702a6-4973-430f-b269-3f8193d607ca",
+                    "model": "PAREP-110",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE 110  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 50,
+                    "price": 13,
+                    "total": 650,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE110.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 100,
+                    "price": 13,
+                    "total": 1300,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                },
+                {
+                    "id": "84baec5a-4632-48a5-bc6d-0c731566cbf0",
+                    "model": "PARTEP-110",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION.  REGLETA / ENCHUFE 110  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 25,
+                    "price": 13,
+                    "total": 325,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARTE110.jpg"
+                },
+                {
+                    "id": "b10702e8-3937-4169-a41e-22d91b79b72c",
+                    "model": "PARTEP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  REGLETA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 50,
+                    "price": 13,
+                    "total": 650,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARTE220.jpg"
+                }
+            ],
+            "total": 4525,
+            "orderDate": "2025-08-07T04:27:40.000Z",
+            "sheetName": "(1) FERREPLAZA IMPORT 08-25"
+        },
+        {
+            "id": "10ca1f6a-e5a5-4ede-a252-174adffcd5ca",
+            "clientName": "FERRETECHOS UNARE, C.A.",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 3,
+                    "price": 8.95,
+                    "total": 26.849999999999998,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                },
+                {
+                    "id": "0681880c-cdc2-4ab2-991e-8cbadd379a6d",
+                    "model": "PEE-110",
+                    "description": "EQUIPOS ELECTRICOS DOBLE TOMA 110  VAC.",
+                    "quantity": 3,
+                    "price": 12.6,
+                    "total": 37.8,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PEE110.jpg"
+                },
+                {
+                    "id": "74ffdd36-d385-436b-b758-3cd3d1f20c1d",
+                    "model": "PARP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 3,
+                    "price": 13.65,
+                    "total": 40.95,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                },
+                {
+                    "id": "080702a6-4973-430f-b269-3f8193d607ca",
+                    "model": "PAREP-110",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE 110  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 3,
+                    "price": 13.65,
+                    "total": 40.95,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE110.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 3,
+                    "price": 13.65,
+                    "total": 40.95,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                },
+                {
+                    "id": "b10702e8-3937-4169-a41e-22d91b79b72c",
+                    "model": "PARTEP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  REGLETA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 3,
+                    "price": 13.65,
+                    "total": 40.95,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARTE220.jpg"
+                }
+            ],
+            "total": 228.45,
+            "orderDate": "2025-08-08T04:27:40.000Z",
+            "sheetName": "(1) FERRETECHOS UNARE 08-25"
+        },
+        {
+            "id": "e6a13b01-ad82-436d-ab3d-98df852553e3",
+            "clientName": "FERRECONSTRUCCIONES BARCELO, C.A.",
+            "products": [
+                {
+                    "id": "eed20118-8268-40a9-a945-caa9eef128ce",
+                    "model": "PRDP-110",
+                    "description": "REFRIGERACION DOMESTICA PLUS 110  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 5,
+                    "price": 11.55,
+                    "total": 57.75,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRDP110.jpg"
+                },
+                {
+                    "id": "74ffdd36-d385-436b-b758-3cd3d1f20c1d",
+                    "model": "PARP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 5,
+                    "price": 13.65,
+                    "total": 68.25,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                },
+                {
+                    "id": "080702a6-4973-430f-b269-3f8193d607ca",
+                    "model": "PAREP-110",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE 110  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 5,
+                    "price": 13.65,
+                    "total": 68.25,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE110.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 5,
+                    "price": 13.65,
+                    "total": 68.25,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                }
+            ],
+            "total": 262.5,
+            "orderDate": "2025-08-08T04:27:40.000Z",
+            "sheetName": "(1) FERRECONST BARCELO 08-25"
+        },
+        {
+            "id": "ea8d3748-0689-4345-a1a9-52148fccd5f1",
+            "clientName": "FERRETERIA Y MATERIALES EL CACIQUE, C.A.",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 6,
+                    "price": 8.95,
+                    "total": 53.699999999999996,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                },
+                {
+                    "id": "74ffdd36-d385-436b-b758-3cd3d1f20c1d",
+                    "model": "PARP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 12,
+                    "price": 13.65,
+                    "total": 163.8,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 6,
+                    "price": 13.65,
+                    "total": 81.9,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                }
+            ],
+            "total": 299.4,
+            "orderDate": "2025-08-08T04:27:40.000Z",
+            "sheetName": "(1) FERRET Y MAT CACIQUE 08-25"
+        },
+        {
+            "id": "26c8c6ae-ee8f-41b9-ac16-17a16ef81b12",
+            "clientName": "FERREHOGAR 151, C.A.",
+            "products": [
+                {
+                    "id": "74ffdd36-d385-436b-b758-3cd3d1f20c1d",
+                    "model": "PARP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 5,
+                    "price": 13.65,
+                    "total": 68.25,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 1,
+                    "price": 13.65,
+                    "total": 13.65,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                }
+            ],
+            "total": 81.9,
+            "orderDate": "2025-08-08T04:27:40.000Z",
+            "sheetName": "(1) FERREHOGAR 151 08-25"
+        },
+        {
+            "id": "a04f1bc1-877d-4b03-a030-d042be3e6209",
+            "clientName": "MUNDO ELECTRIC, C.A.",
+            "products": [
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 4,
+                    "price": 13.65,
+                    "total": 54.6,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                }
+            ],
+            "total": 54.6,
+            "orderDate": "2025-08-08T04:27:40.000Z",
+            "sheetName": "(1) MUNDO ELECTRIC 08-25"
+        },
+        {
+            "id": "4bd89d18-7644-4b8f-8bb3-cfd4094e45a3",
+            "clientName": "FERREMATERIALES EL ROBLE, C.A.",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 20,
+                    "price": 8.95,
+                    "total": 179,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                },
+                {
+                    "id": "74ffdd36-d385-436b-b758-3cd3d1f20c1d",
+                    "model": "PARP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 10,
+                    "price": 13.65,
+                    "total": 136.5,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                },
+                {
+                    "id": "080702a6-4973-430f-b269-3f8193d607ca",
+                    "model": "PAREP-110",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE 110  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 10,
+                    "price": 13.65,
+                    "total": 136.5,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE110.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 10,
+                    "price": 13.65,
+                    "total": 136.5,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                }
+            ],
+            "total": 588.5,
+            "orderDate": "2025-08-08T04:27:40.000Z",
+            "sheetName": "(2) FERREMAT EL ROBRE 08-25"
+        },
+        {
+            "id": "58c853df-0a50-44af-bec2-9ad52799ac1e",
+            "clientName": "SONIDO 7 ONCE DOS, C.A.",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 10,
+                    "price": 8.95,
+                    "total": 89.5,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                },
+                {
+                    "id": "74ffdd36-d385-436b-b758-3cd3d1f20c1d",
+                    "model": "PARP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 6,
+                    "price": 13.65,
+                    "total": 81.9,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 6,
+                    "price": 13.65,
+                    "total": 81.9,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                },
+                {
+                    "id": "b10702e8-3937-4169-a41e-22d91b79b72c",
+                    "model": "PARTEP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  REGLETA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 3,
+                    "price": 13.65,
+                    "total": 40.95,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARTE220.jpg"
+                }
+            ],
+            "total": 294.25,
+            "orderDate": "2025-08-11T04:27:40.000Z",
+            "sheetName": "(2) SONIDO 7 ONCE 08-25"
+        },
+        {
+            "id": "620b1d65-9013-4110-8fb1-328a8c12c0b5",
+            "clientName": "HIPERMERCADO 5 EN 1, C.A.",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 2,
+                    "price": 8.95,
+                    "total": 17.9,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                },
+                {
+                    "id": "080702a6-4973-430f-b269-3f8193d607ca",
+                    "model": "PAREP-110",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE 110  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 4,
+                    "price": 13.65,
+                    "total": 54.6,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE110.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 4,
+                    "price": 13.65,
+                    "total": 54.6,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                },
+                {
+                    "id": "b10702e8-3937-4169-a41e-22d91b79b72c",
+                    "model": "PARTEP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  REGLETA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 4,
+                    "price": 13.65,
+                    "total": 54.6,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARTE220.jpg"
+                }
+            ],
+            "total": 181.7,
+            "orderDate": "2025-08-11T04:27:40.000Z",
+            "sheetName": "(2) HIPERMERCADO 5EN1 08-25"
+        },
+        {
+            "id": "c773ee93-37f2-4d42-916c-654fc8e8876b",
+            "clientName": "DISTRIBUIDORA CASA BELLA, C.A.",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 24,
+                    "price": 8.95,
+                    "total": 214.79999999999998,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                }
+            ],
+            "total": 214.79999999999998,
+            "orderDate": "2025-08-11T04:27:40.000Z",
+            "sheetName": "(2) DIST CASA BELLA 08-25"
+        },
+        {
+            "id": "99a3758d-f828-47be-acc1-b6a774f276fb",
+            "clientName": "INVERSIONES LA MUNECA 1, C.A.",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 15,
+                    "price": 8.95,
+                    "total": 134.25,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                },
+                {
+                    "id": "316b0ce4-146f-49ed-a291-08f0454dba9e",
+                    "model": "PEEP-110",
+                    "description": "EQUIPOS ELECTRICOS PLUS DOBLE TOMA 110  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 20,
+                    "price": 14.7,
+                    "total": 294,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PEEP110.jpg"
+                },
+                {
+                    "id": "74ffdd36-d385-436b-b758-3cd3d1f20c1d",
+                    "model": "PARP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 10,
+                    "price": 13.65,
+                    "total": 136.5,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                },
+                {
+                    "id": "080702a6-4973-430f-b269-3f8193d607ca",
+                    "model": "PAREP-110",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE 110  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 15,
+                    "price": 13.65,
+                    "total": 204.75,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE110.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 20,
+                    "price": 13.65,
+                    "total": 273,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                },
+                {
+                    "id": "b10702e8-3937-4169-a41e-22d91b79b72c",
+                    "model": "PARTEP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  REGLETA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 10,
+                    "price": 13.65,
+                    "total": 136.5,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARTE220.jpg"
+                }
+            ],
+            "total": 1179,
+            "orderDate": "2025-08-11T04:27:40.000Z",
+            "sheetName": "(2) INV LA MUNECA1 08-25"
+        },
+        {
+            "id": "085c36c8-9796-4639-8e61-406c0ef5cb5c",
+            "clientName": "COMERCIAL SUPER EXCELENTE, C.A.",
+            "products": [
+                {
+                    "id": "74ffdd36-d385-436b-b758-3cd3d1f20c1d",
+                    "model": "PARP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 6,
+                    "price": 13.65,
+                    "total": 81.9,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                },
+                {
+                    "id": "b10702e8-3937-4169-a41e-22d91b79b72c",
+                    "model": "PARTEP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  REGLETA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 6,
+                    "price": 13.65,
+                    "total": 81.9,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARTE220.jpg"
+                }
+            ],
+            "total": 163.8,
+            "orderDate": "2025-08-11T04:27:40.000Z",
+            "sheetName": "(2) CCIAL SUPER EXCELENTE 08-25"
+        },
+        {
+            "id": "35a1f0c3-1de6-4e14-9dbb-9e8d27638b92",
+            "clientName": "REPUESTOS PARA EL HOGAR RUTA 1, C.A.",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 15,
+                    "price": 8.95,
+                    "total": 134.25,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                },
+                {
+                    "id": "0681880c-cdc2-4ab2-991e-8cbadd379a6d",
+                    "model": "PEE-110",
+                    "description": "EQUIPOS ELECTRICOS DOBLE TOMA 110  VAC.",
+                    "quantity": 5,
+                    "price": 12.6,
+                    "total": 63,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PEE110.jpg"
+                },
+                {
+                    "id": "080702a6-4973-430f-b269-3f8193d607ca",
+                    "model": "PAREP-110",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE 110  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 5,
+                    "price": 13.65,
+                    "total": 68.25,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE110.jpg"
+                }
+            ],
+            "total": 265.5,
+            "orderDate": "2025-08-11T04:27:40.000Z",
+            "sheetName": "(2) REP HOGAR RUTA1 08-25"
+        },
+        {
+            "id": "928ad75e-deb1-4406-839b-ce6878c9c9e3",
+            "clientName": "ILUMECCA 19, C.A.",
+            "products": [
+                {
+                    "id": "ab3a110b-8ce2-4cac-885a-13931a6bf899",
+                    "model": "PEEPHD-110",
+                    "description": "EQUIPOS ELECTRICOS PLUS ALTO CONSUMO 110VAC.  PROTECCION DE PICOS",
+                    "quantity": 3,
+                    "price": 15.75,
+                    "total": 47.25,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PEEPHD110.jpg"
+                },
+                {
+                    "id": "a9b652ba-9893-43e6-af49-ab057a1dcf25",
+                    "model": "PARP-110",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  110  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 3,
+                    "price": 14.45,
+                    "total": 43.349999999999994,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR110.jpg"
+                },
+                {
+                    "id": "74ffdd36-d385-436b-b758-3cd3d1f20c1d",
+                    "model": "PARP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 3,
+                    "price": 14.45,
+                    "total": 43.349999999999994,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                },
+                {
+                    "id": "5a63417b-094c-442e-a0d2-62984ab690a1",
+                    "model": "PARDAP-110",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION 110  VAC.  REGLETA /REGLETA. AJUSTABLE CON SUPRESOR DE PICOS",
+                    "quantity": 3,
+                    "price": 17.85,
+                    "total": 53.550000000000004,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARDA110.jpg"
+                },
+                {
+                    "id": "e0c4daf7-e5f1-4216-97c6-24d7b8b90b3b",
+                    "model": "PARDAP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION 220 VAC.  REGLETA /REGLETA. AJUSTABLE CON SUPRESOR DE PICOS",
+                    "quantity": 3,
+                    "price": 17.85,
+                    "total": 53.550000000000004,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARDA220.jpg"
+                }
+            ],
+            "total": 241.05,
+            "orderDate": "2025-08-11T04:27:40.000Z",
+            "sheetName": "(2) ILUMECCA19 08-25"
+        },
+        {
+            "id": "ff8ceb50-dfd0-45a4-a187-eff924dc1ce0",
+            "clientName": "HIERROS EL PRIMO, C.A.",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 20,
+                    "price": 8.95,
+                    "total": 179,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                }
+            ],
+            "total": 179,
+            "orderDate": "2025-08-13T04:27:40.000Z",
+            "sheetName": "(2) HIERROS PRIMO 08-25"
+        },
+        {
+            "id": "d843a995-bf52-4f84-9c3d-0d0b5d0afd89",
+            "clientName": "FERRETERIA ABIAM 2024, C.A.",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 6,
+                    "price": 8.95,
+                    "total": 53.699999999999996,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                },
+                {
+                    "id": "74ffdd36-d385-436b-b758-3cd3d1f20c1d",
+                    "model": "PARP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 3,
+                    "price": 14.45,
+                    "total": 43.349999999999994,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                },
+                {
+                    "id": "e0c4daf7-e5f1-4216-97c6-24d7b8b90b3b",
+                    "model": "PARDAP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION 220 VAC.  REGLETA /REGLETA. AJUSTABLE CON SUPRESOR DE PICOS",
+                    "quantity": 2,
+                    "price": 17.85,
+                    "total": 35.7,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARDA220.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 3,
+                    "price": 14.45,
+                    "total": 43.349999999999994,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                },
+                {
+                    "id": "b10702e8-3937-4169-a41e-22d91b79b72c",
+                    "model": "PARTEP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  REGLETA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 3,
+                    "price": 14.45,
+                    "total": 43.349999999999994,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARTE220.jpg"
+                }
+            ],
+            "total": 219.45,
+            "orderDate": "2025-08-13T04:27:40.000Z",
+            "sheetName": "(2) FERRET ABIAM 08-25"
+        },
+        {
+            "id": "05470ff9-18dc-4059-b019-2707bbfc50d5",
+            "clientName": "FERRETERIA Y SUMINISTROS DE CONSTRUCCION HERCULES, C.A.",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 20,
+                    "price": 8.95,
+                    "total": 179,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                },
+                {
+                    "id": "080702a6-4973-430f-b269-3f8193d607ca",
+                    "model": "PAREP-110",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE 110  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 20,
+                    "price": 13.65,
+                    "total": 273,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE110.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 20,
+                    "price": 13.65,
+                    "total": 273,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                },
+                {
+                    "id": "84baec5a-4632-48a5-bc6d-0c731566cbf0",
+                    "model": "PARTEP-110",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION.  REGLETA / ENCHUFE 110  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 20,
+                    "price": 13.65,
+                    "total": 273,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARTE110.jpg"
+                }
+            ],
+            "total": 998,
+            "orderDate": "2025-08-13T04:27:40.000Z",
+            "sheetName": "(2) FERRETERIA HERCULES 08-25"
+        },
+        {
+            "id": "9547e863-0f27-4f28-af51-2cdc17412313",
+            "clientName": "REFRIGERACION EL LIDER, C.A.",
+            "products": [
+                {
+                    "id": "74ffdd36-d385-436b-b758-3cd3d1f20c1d",
+                    "model": "PARP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 20,
+                    "price": 13.65,
+                    "total": 273,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                }
+            ],
+            "total": 273,
+            "orderDate": "2025-08-14T04:27:40.000Z",
+            "sheetName": "(2) REFRIG EL LIDER 08-25"
+        },
+        {
+            "id": "82669612-c0a6-4723-985b-f2a11bfc57c8",
+            "clientName": "IRAMA COLINA",
+            "products": [
+                {
+                    "id": "a3a7a6d7-1a13-436e-9c89-6669a2535a2a",
+                    "model": "PRD-110",
+                    "description": "REFRIGERACION DOMESTICA 110  VAC.",
+                    "quantity": 2,
+                    "price": 8.95,
+                    "total": 17.9,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PRD110.jpg"
+                },
+                {
+                    "id": "0681880c-cdc2-4ab2-991e-8cbadd379a6d",
+                    "model": "PEE-110",
+                    "description": "EQUIPOS ELECTRICOS DOBLE TOMA 110  VAC.",
+                    "quantity": 2,
+                    "price": 12.6,
+                    "total": 25.2,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PEE110.jpg"
+                },
+                {
+                    "id": "74ffdd36-d385-436b-b758-3cd3d1f20c1d",
+                    "model": "PARP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION  220  VAC.  REGLETA /REGLETA. CON SUPRESOR DE PICOS",
+                    "quantity": 2,
+                    "price": 13.65,
+                    "total": 27.3,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PAR220.jpg"
+                },
+                {
+                    "id": "080702a6-4973-430f-b269-3f8193d607ca",
+                    "model": "PAREP-110",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE 110  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 2,
+                    "price": 13.65,
+                    "total": 27.3,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE110.jpg"
+                },
+                {
+                    "id": "bb76ad8c-a21a-415a-b54b-f455a20005df",
+                    "model": "PAREP-220",
+                    "description": "AIRE ACONDIC. Y REFRIGERACION. TOMA / ENCHUFE  220  VAC. CON SUPRESOR DE PICOS",
+                    "quantity": 2,
+                    "price": 13.65,
+                    "total": 27.3,
+                    "category": "Protectores Eléctricos",
+                    "imageUrl": "PARE220.jpg"
+                }
+            ],
+            "total": 124.99999999999999,
+            "orderDate": "2025-08-14T04:27:40.000Z",
+            "sheetName": "(2) IRAMA 08-25"
+        }
+    ]
+}
